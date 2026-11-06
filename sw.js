@@ -1,6 +1,6 @@
 // يخلي التطبيق يفتح حتى من غير نت (البيانات نفسها بتتجاب من جوجل)
-var CACHE = "mv-expenses-v3";
-var SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png", "./apple-touch-icon.png"];
+var CACHE = "mv-expenses-v4";
+var SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png", "./apple-touch-icon.png", "./logo-mark.png", "./logo-full.png"];
 
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));

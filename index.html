@@ -42,6 +42,10 @@ h1,h2,h3{font-family:var(--f-num);margin:0;text-wrap:balance}
 h1{font-size:24px;font-weight:700}
 h2{font-size:17px;font-weight:600}
 h3{font-size:15px;font-weight:600}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand .mark{width:52px;height:52px;border-radius:12px;flex:none;background:#000}
+.loginlogo{display:block;margin:0 auto;width:140px;height:140px;border-radius:16px;background:#000}
+#setTitle{text-align:center}
 header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
 .sub{color:var(--muted);font-size:13px}
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
@@ -205,9 +209,12 @@ input[type=url],input[type=password]{font:inherit;font-size:16px;color:var(--fg)
 <body>
 <div class="wrap" id="app">
   <header>
-    <div>
-      <h1>مصاريف مالتيفرس</h1>
-      <div class="sub">سجّل أي مصروف، واختار اتدفع من عهدة الحسابات ولا اتصرف من البنك على طول</div>
+    <div class="brand">
+      <img src="logo-mark.png" alt="" width="52" height="52" class="mark">
+      <div>
+        <h1>مصاريف مالتيفرس</h1>
+        <div class="sub">سجّل أي مصروف، واختار اتدفع من عهدة الحسابات ولا اتصرف من البنك على طول</div>
+      </div>
     </div>
     <div class="hdr-tools">
       <button class="btn" id="syncBtn" type="button" aria-label="تحديث البيانات"><span id="sync" class="sync">…</span></button>
@@ -344,6 +351,7 @@ input[type=url],input[type=password]{font:inherit;font-size:16px;color:var(--fg)
 
 <div class="overlay" id="settings" hidden role="dialog" aria-modal="true" aria-labelledby="setTitle">
   <form class="panel" id="setForm" novalidate>
+    <img src="logo-full.png" alt="Multiverse Group" width="140" height="140" class="loginlogo">
     <h2 id="setTitle">مصاريف مالتيفرس</h2>
     <div id="setFirst" class="sub">اكتب الرمز السري مرة واحدة بس على الجهاز ده، وبعدها التطبيق هيفتح على طول.</div>
     <div class="field">
